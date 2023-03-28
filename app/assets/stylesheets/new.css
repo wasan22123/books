@@ -1,0 +1,29 @@
+.field {
+    margin: 30px auto;
+    width: 90%;
+    border: solid #aaf7c9;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #aaf7c9;
+    height: 90px;
+  }
+  input[type="text"] {
+    width: 95%;
+    height: 50px;
+    border-radius: 30px;
+  }
+  input[type="submit"] {
+    width: 200px;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    background-color: #aaf7c9;
+    border: #aaf7c9
+
+  }
+  .nav-link{
+    font-size:1.5rem;
+    text-align: center;
+  }
+
+  

@@ -1,0 +1,35 @@
+.books-container {
+    width: 70%;
+    margin: 50px auto;
+  }
+  h1 {
+    width: 200px;
+    margin: 40px auto;
+    text-align: center;
+  }
+  .boo {
+    width: 200px;
+    margin: 30px auto;
+    text-align: center;
+  }
+  h2 {
+    width: 100px;
+    margin: 30px auto;
+    text-align: center;
+  }
+  .book {
+    margin-top: 10px;
+    padding-top: 20px;
+  }
+  .main-box {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  p{
+    text-align: center;
+  }
+
+  div {
+     text-align : center ; 
+    }

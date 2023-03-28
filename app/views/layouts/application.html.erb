@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Books</title>
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+
+    <script src="https://kit.fontawesome.com/2dce5186d6.js" crossorigin="anonymous"></script>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
+  </head>
+
+  <body>
+  <header>
+  <h1>本のご紹介</h1>
+  <div class="header-list">
+    <ul>
+        <div class="home">
+        <%= link_to "ホーム", books_path %>
+        </div>
+        <div class="sinki">
+        <%= link_to "新規投稿",new_book_path %>
+        </div>
+    </ul>
+  </div>
+  </header>
+    <main>
+      <%= yield %>
+      </main>
+    </body>
+</html>

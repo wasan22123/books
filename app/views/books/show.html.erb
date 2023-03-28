@@ -1,0 +1,50 @@
+<div class="bookss">
+    <h4>タイトル</h4>
+    <p><%= @book.title %></p>
+</div>
+
+<div class="bookss">
+    <h4>作者</h4>
+    <p><%= @book.author %></p>
+
+</div>
+
+<div class="bookss">
+    <h4>値段</h4>
+    <p><%= @book.price %></p>
+</div>
+
+
+<div class="bookss">
+    <h4>詳細</h4>
+    <p><%= @book.body %></p>
+    <p><%= @book.created_at %></p>
+</div>
+
+<div class="iine">
+    <% if user_signed_in? %>
+      <% if current_user.already_liked?(@book) %>
+        <%= button_to book_like_path(@book), method: :delete do %>
+        <i class="fas fa-heart"></i><%= @book.likes.count %>
+        <% end %>
+      <% else %>
+        <%= button_to book_likes_path(@book), method: :post do %>
+        <i class="fa-regular fa-heart"></i><%= @book.likes.count %>
+        <% end %>
+      <% end %>
+    <% else %>
+    <i class="fa-sharp fa-solid fa-heart"></i><%= t.likes.count %>
+    <i class="fas fa-heart"></i><%= @book.likes.count %>
+    <% end %>
+</div>
+
+<% @book.tags.each do |tag| %>
+    <span><%= tag.name %></span>
+<% end %>
+
+<h2>いいねしたユーザー</h2>
+    <% @book.liked_users.each do |user| %>
+    <li><%= user.name %></li>
+    <% end %>
+
+<%= link_to "Tweet一覧に戻る", books_path %>

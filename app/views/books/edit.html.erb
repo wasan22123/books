@@ -1,0 +1,27 @@
+<%= form_for @book do |f| %>
+    <div class="taitoru">
+    <p>タイトル</p>
+    <%#= f.label :タイトル #%>
+    <%= f.text_field :title, :size => 140 %>
+    </div>
+
+    <div class="sakusya">
+    <%#= f.label :作者 #%>
+    <p>作者</p>
+    <%= f.text_field :author, :size => 140 %>
+    </div>
+
+    <div class="nedan">
+    <%#= f.label :値段 #%>
+    <p>値段</p>
+    <%= f.text_field :price, :size => 140 %> 
+    </div>
+
+    <div class="syousai">
+    <%#= f.label :詳細 #%>
+    <p>詳細</p>
+    <%= f.text_field :body, :size => 140 %> 
+    </div>
+
+    <p><%= f.submit "編集する" %></p>
+<% end %>
