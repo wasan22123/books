@@ -12,7 +12,7 @@ services:
     env: ruby
     region: singapore
     plan: free
-    buildCommand: "./bin/render-build.sh"
+    buildCommand: "npm install & npm run build"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
