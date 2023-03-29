@@ -66,10 +66,12 @@
             <div class="main-box">
                 <div class="left-container"><%#= t.body #%></div>
                 <div class="right-container">
-            <%= link_to "詳細へ", book_path(t.id) %>
+                <div class="link">
+            <%= link_to "詳細へ", book_path(t.id) , class: "nav-link"%>
             <% if user_signed_in? && current_user.id == t.user_id %>
-                <%= link_to "編集する", edit_book_path(t.id) %>
+                <%= link_to "編集する", edit_book_path(t.id), class: "nav-link" %>
                 <%= button_to "削除する", book_path(t.id), method: :delete %>
+                </div>
             <% end %> 
             </div>
             </div>

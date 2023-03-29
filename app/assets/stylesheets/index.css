@@ -33,3 +33,11 @@
   div {
      text-align : center ; 
     }
+
+  .nav-link{
+    font-size: 1.8rem;
+  }
+
+  .link{
+    text-align: center;
+  }
